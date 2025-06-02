@@ -1,12 +1,12 @@
 #!/bin/bash
 
-echo "Copying app files to Nginx directory..."
+echo "Copying Vite build to Nginx directory..."
 
-# Ensure the Nginx directory exists
+# Create Nginx default root if not exists
 mkdir -p /var/www/html/
 
-# Optionally clear the directory (uncomment if needed)
+# Clean existing files
 rm -rf /var/www/html/*
 
-# Copy React Vite build files to Nginx directory
-cp -r /home/ec2-user/react-vite-app/* /var/www/html/
+# Copy Vite build
+cp -r /home/ec2-user/react-vite-app/dist/* /var/www/html/
