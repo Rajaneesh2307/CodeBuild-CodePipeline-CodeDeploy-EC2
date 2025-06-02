@@ -9,4 +9,5 @@ systemctl enable nginx
 systemctl start nginx
 
 # Clean old deployment (optional)
-rm -rf /var/www/html/*
+rm -rf /usr/share/nginx/html/*
+
